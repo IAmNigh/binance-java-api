@@ -69,6 +69,14 @@ public class SymbolFilter {
    * Defines the maximum number of "algo" orders an account is allowed to have open on a symbol. "Algo" orders are STOP_LOSS, STOP_LOSS_LIMIT, TAKE_PROFIT, and TAKE_PROFIT_LIMIT orders.
    */
   private String maxNumAlgoOrders;
+  
+   //{"filterType":"PERCENT_PRICE","multiplierUp":"10","multiplierDown":"0.1","avgPriceMins":5},
+
+  private String multiplierUp;
+  private String multiplierDown;
+  private String avgPriceMins;
+  private String applyToMarket;
+  private String maxNumIcebergOrders;
 
   /**
    * MAX_NUM_ORDERS filter defines the maximum number of orders an account is allowed to have open on a symbol. Note that both "algo" orders and normal orders are counted for this filter.
@@ -157,4 +165,38 @@ public class SymbolFilter {
   public void setLimit(String limit) {
     this.limit = limit;
   }
+  
+  public String getMultiplierUp() {
+    return multiplierUp;
+  }
+
+  public void setMultiplierUp(String multiplierUp) {
+    this.multiplierUp = multiplierUp;
+  }
+
+  public String getMultiplierDown() {
+    return multiplierDown;
+  }
+
+  public void setMultiplierDown(String multiplierDown) {
+    this.multiplierDown = multiplierDown;
+  }
+
+  public String getAvgPriceMins() {
+    return avgPriceMins;
+  }
+
+  public void setAvgPriceMins(String avgPriceMins) {
+    this.avgPriceMins = avgPriceMins;
+  }
+
+  public String getApplyToMarket() { return applyToMarket; }
+
+  public void setApplyToMarket(String applyToMarket) { this.applyToMarket = applyToMarket; }
+
+  public String getMaxNumIcebergOrders() { return maxNumIcebergOrders; }
+
+  public void setMaxNumIcebergOrders(String maxNumIcebergOrders) { this.maxNumIcebergOrders = maxNumIcebergOrders; }
+  
+  
 }
